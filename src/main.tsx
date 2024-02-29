@@ -5,8 +5,8 @@ import { BrowserRouter } from 'react-router-dom';
 
 import App from './App.tsx';
 
-import './reset.css';
-import './index.scss';
+import './styles/reset.css';
+import './styles/index.scss';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <Provider store={store}>

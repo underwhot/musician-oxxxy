@@ -1,5 +1,9 @@
+import { MainBanner } from './MainBanner';
+
 export const Home = () => {
   return (
-    <main>Home</main>
-  )
-}
+    <main className="main">
+      <MainBanner />
+    </main>
+  );
+};

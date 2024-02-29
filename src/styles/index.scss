@@ -1,0 +1,112 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+@import "./header.scss";
+@import "./banner.scss";
+@import "./tour.scss";
+@import "./tracks.scss";
+@import "./news.scss";
+@import "./footer.scss";
+
+html,
+body {
+  background-color: $primary;
+  color: $light;
+  font-family: 'Inter', sans-serif;
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  @supports (overflow: clip) {
+    overflow: clip;
+  }
+  > main {
+    flex: 1 1 auto;
+  }
+  > * {
+    min-width: 0;
+  }
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1230px;
+}
+
+.icon {
+  width: 12px;
+  height: 12px;
+}
+
+.button-more {
+  color: $light;
+  font-size: 14px;
+  font-weight: 900;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 40px;
+  cursor: pointer;
+  transition: color 0.25s;
+
+  &:hover {
+    color: $action;
+  }
+
+  @media only screen and (max-width: 1366px) {
+    font-size: 12px;
+    margin-top: 25px;
+  }
+}
+
+.loader {
+  min-height: 20vh;
+  width: 100%;
+  position: relative;
+  @include flex;
+
+  img {
+    max-width: 50px;
+    animation: beat 0.75s linear infinite;
+  }
+}
+
+.page {
+  padding: 40px 0;
+
+  &-title {
+    color: $light;
+    font-size: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 125%;
+
+    @media only screen and (max-width: 1366px) {
+      font-size: 40px;
+    }
+
+    @media only screen and (max-width: 750px) {
+      font-size: 24px;
+    }
+  }
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}

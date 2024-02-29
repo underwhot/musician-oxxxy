@@ -11,10 +11,12 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.1",
+    "@types/react-animate-on-scroll": "^2.1.8",
+    "animate.css": "^4.1.1",
     "contentful": "^10.6.22",
     "framer-motion": "^11.0.8",
     "react": "^18.2.0",
-    "react-animation-on-scroll": "^5.1.0",
+    "react-animate-on-scroll": "^2.1.7",
     "react-dom": "^18.2.0",
     "react-redux": "^9.1.0",
     "react-router-dom": "^6.22.2",
