@@ -1,11 +1,11 @@
-@import "./mixins.scss";
-@import "./variables.scss";
-@import "./header.scss";
-@import "./banner.scss";
-@import "./tour.scss";
-@import "./tracks.scss";
-@import "./news.scss";
-@import "./footer.scss";
+@import './mixins.scss';
+@import './variables.scss';
+@import './header.scss';
+@import './banner.scss';
+@import './tour.scss';
+@import './tracks.scss';
+@import './news.scss';
+@import './footer.scss';
 
 html,
 body {
@@ -45,6 +45,11 @@ h2 {
 .icon {
   width: 12px;
   height: 12px;
+}
+
+section {
+  position: relative;
+  z-index: 1;
 }
 
 .button-more {

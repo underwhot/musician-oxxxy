@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 
 type SectionProps = {
   children: ReactNode;
-  rest?: {};
+  [key: string]: any;
 };
 
 export const Section = ({ children, ...rest }: SectionProps) => {
