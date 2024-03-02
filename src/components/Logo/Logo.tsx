@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import LOGO from '/images/logo.webp';
 
-export const Logo = () => {
+export const Logo = ({ onClick = () => {} }) => {
   return (
     <div className="logo">
-      <Link to="/">
+      <Link onClick={onClick} to="/">
         <img src={LOGO} alt="logotype" />
       </Link>
     </div>

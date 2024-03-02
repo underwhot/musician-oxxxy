@@ -32,3 +32,36 @@ export const trackCollectionQuery = `
     }
   }
 }`;
+
+export const newsCollectionQuery = `
+{
+  newsCollection {
+    items {
+      title
+      date
+      cover {
+        url
+      }
+      sys {
+        id
+      }
+    }
+  }
+}`;
+
+export const newsItemQuery = (id: string) => `
+{
+  news(id: "${id}") {
+    sys {
+      id
+    }
+    title
+    date
+    cover {
+      url
+    }
+    description {
+      json
+    }
+  }
+}`;

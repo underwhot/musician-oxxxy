@@ -1,8 +1,10 @@
-export const MAIN_URL = `https://graphql.contentful.com/content/v1/spaces/${import.meta.env.VITE_REACT_APP_SPACE_ID}`;
+export const MAIN_URL = `https://graphql.contentful.com/content/v1/spaces/${
+  import.meta.env.VITE_REACT_APP_SPACE_ID
+}`;
 
 export const MENU = [
   { name: 'Concerts', link: 'tour' },
-  { name: 'Creativity', link: '#tracks' },
+  { name: 'Creativity', link: 'tracks' },
   { name: 'News', link: 'news' },
   { name: 'OXXXYSHOP', link: 'shop' },
 ];

@@ -1,28 +1,15 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import ScrollAnimation from 'react-animate-on-scroll';
-import { AppDispatch } from '../../redux/store';
-import {
-  getTrackItems,
-  selectIsLoading,
-  selectTrackItems,
-} from '../../redux/slices/trackSlice';
+import { useTrackItems } from '../../hooks/useTrackItems';
 
 import { Section } from '../Section/Section';
-import { SectionTitle } from '../SectionTitle/SectionTitle';
-import { Icon } from '../Icon/Icon';
+import { SectionTitle } from '../Title/SectionTitle';
+import { Loader } from '../Loader/Loader';
 
 import { getLocaleDateString } from '../../utils/common';
 
 export const Tracks = () => {
-  const dispatch = useDispatch<AppDispatch>();
-  const tracks = useSelector(selectTrackItems);
-  const isLoading = useSelector(selectIsLoading);
-
-  useEffect(() => {
-    dispatch(getTrackItems());
-  }, [dispatch]);
+  const { trackItems, isLoading } = useTrackItems();
 
   return (
     <Section className="tracks-section">
@@ -30,10 +17,10 @@ export const Tracks = () => {
         <SectionTitle text="Tracks" />
 
         {isLoading ? (
-          'LOADING'
+          <Loader />
         ) : (
           <div className="tracks">
-            {tracks
+            {trackItems
               .filter((_, i) => i < 3)
               .map((track) => (
                 <ScrollAnimation
